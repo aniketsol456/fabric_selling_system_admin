@@ -1,0 +1,137 @@
+.customer-management * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.customer-management body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+.customer-management .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.customer-management h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.customer-management .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.customer-management .filter {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.customer-management .filter label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.customer-management .filter select,
+.customer-management .filter input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.customer-management .filter select:focus,
+.customer-management .filter input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.customer-management .customer-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.customer-management .customer-table th,
+.customer-management .customer-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.customer-management .customer-table th {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.customer-management .customer-table td {
+    background-color: #fff;
+    color: #333;
+}
+
+.customer-management .customer-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.customer-management .active {
+    background-color: #4caf50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.customer-management .suspended {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.customer-management .action-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.customermanagement .action-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .customer-management .filters {
+        flex-direction: column;
+    }
+
+    .customer-management .filter {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .customer-management .customer-table th,
+    .customer-management .customer-table td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
