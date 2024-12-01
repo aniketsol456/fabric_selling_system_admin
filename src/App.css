@@ -1,0 +1,19 @@
+.appContainer {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sidebar {
+    flex-shrink: 0;
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+}
+
+.mainContent {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+}
