@@ -1,0 +1,179 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  background-color: #0056b3;
+  color: white;
+  height: 100vh;
+  position: relative;
+  transition: width 0.3s, transform 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar.mobile {
+  position: fixed;
+  z-index: 1000;
+  transform: translateX(-100%);
+}
+
+.sidebar.mobile.open {
+  transform: translateX(0);
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #0056b3;
+  border-bottom: 1px solid white;
+}
+
+.sidebarHeader .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.sidebarHeader .toggleButton {
+  font-size: 1.2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu {
+  flex-grow: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuItem {
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menuItem:hover {
+  background-color: #16395f;
+}
+
+.menuItem .menuItemContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menuItem .icon {
+  font-size: 1.5rem;
+}
+
+.menuItem span {
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+
+.menuItemContent {
+  text-decoration: none;
+  color: white;
+  border-radius: 4px;
+}
+
+.subMenu {
+  list-style: none;
+  padding-left: 20px;
+  display: none;
+  background-color: #16395f;
+  border-radius: 4px;
+  margin-top: 5px;
+  padding: 5px 0;
+}
+
+.subMenu.open {
+  display: block;
+}
+
+.subMenuItem {
+  padding: 10px 15px;
+}
+
+.subMenuItem a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.subMenuItem a:hover {
+  color: #007bff;
+}
+
+.subMenuItem a.active {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.logoutButtonWrapper {
+  margin-top: auto;
+  text-align: center;
+  padding: 15px;
+}
+
+.logoutButton {
+  background-color: #122d48;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.logoutButton:hover {
+  background-color: #0e2136;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: 100%;
+  }
+
+  .menuItem span {
+    display: none;
+  }
+
+  .menuItem .menuItemContent {
+    justify-content: center;
+  }
+
+  .subMenu {
+    padding-left: 10px;
+  }
+
+  .sidebarHeader {
+    padding: 10px;
+  }
+
+  .sidebarHeader .logo {
+    font-size: 1.2rem;
+  }
+
+  .menuItem {
+    padding: 10px;
+  }
+
+  .menuItem .icon {
+    font-size: 1.2rem;
+  }
+}
