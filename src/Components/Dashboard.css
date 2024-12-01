@@ -1,0 +1,151 @@
+/* Dashboard Layout */
+.dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f5f7;
+  color: #333;
+}
+
+.dashboardTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.dashboardSubtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Cards Section */
+.dashboardCards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  margin-bottom: 30px;
+  gap: 20px; /* Add spacing between cards */
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 calc(30% - 20px); /* Adjust card size for responsive design */
+  text-align: center;
+  transition: transform 0.2s;
+  min-width: 250px; /* Ensure cards don't get too small */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Specific Card Colors */
+.inventoryCard {
+  border-top: 4px solid #4caf50;
+}
+
+.ordersCard {
+  border-top: 4px solid #ff9800;
+}
+
+.salesCard {
+  border-top: 4px solid #2196f3;
+}
+
+/* Chart Section */
+.chartContainer {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.chartContainer h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+.chartPlaceholder {
+  height: 200px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboardCards {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboardTitle {
+    font-size: 24px;
+  }
+
+  .dashboardSubtitle {
+    font-size: 14px;
+  }
+
+  .dashboardCards {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
+  }
+
+  .card {
+    width: 80%; /* Make cards take up more space on smaller screens */
+    flex: none;
+    margin-bottom: 20px;
+  }
+
+  .chartContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboardTitle {
+    font-size: 20px;
+  }
+
+  .dashboardSubtitle {
+    font-size: 12px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .chartPlaceholder {
+    font-size: 14px;
+  }
+}
