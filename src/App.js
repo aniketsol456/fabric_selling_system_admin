@@ -5,6 +5,8 @@ import Sidebar from './Components/Sidebar';
 import Dashboard from './Components/Dashboard';
 import CustomerManagement from './Components/CustomerManagement';
 import Shipping from './Components/Shipping';
+import Coupon from './Components/Coupon';
+import ChangePassword from './Components/ChangePassword';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
                   <Route path='/dashboard' element={<Dashboard />} />
                   <Route path='/customers' element={<CustomerManagement />} />
                   <Route path='/shipping' element={<Shipping />} />
+                  <Route path='/couponview' element={<Coupon/>} />
+                  <Route path='/changepass' element={<ChangePassword/>} />
                 </Routes>
               </div>
             </div>
