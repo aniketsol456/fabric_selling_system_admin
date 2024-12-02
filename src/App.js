@@ -9,26 +9,28 @@ import Shipping from './Components/Shipping';
 function App() {
   return (
     <BrowserRouter>
-      <div className='appContainer'>
-        <Routes>
-          <Route exact path='/' element={<Login />} />
-          <Route
-            path='*'
-            element={
-              <>
-                <Sidebar />
-                <div className='mainContent'>
-                  <Routes>
-                    <Route path='/dashboard' element={<Dashboard/>} />
-                    <Route path='/customers' element={<CustomerManagement/>} />
-                    <Route path='/shipping' element={<Shipping/>} />
-                  </Routes>
-                </div>
-              </>
-            }
-          />
-        </Routes>
-      </div>
+      <Routes>
+        {/* Apply a unique wrapper for the login page */}
+        <Route 
+          exact path='/' 
+          element={<div className='loginPage'><Login /></div>} 
+        />
+        <Route
+          path='*'
+          element={
+            <div className='appContainer'>
+              <Sidebar />
+              <div className='mainContent'>
+                <Routes>
+                  <Route path='/dashboard' element={<Dashboard />} />
+                  <Route path='/customers' element={<CustomerManagement />} />
+                  <Route path='/shipping' element={<Shipping />} />
+                </Routes>
+              </div>
+            </div>
+          }
+        />
+      </Routes>
     </BrowserRouter>
   );
 }
