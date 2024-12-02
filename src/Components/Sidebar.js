@@ -78,7 +78,7 @@ const Sidebar = () => {
         <button className="toggleButton" onClick={toggleSidebar}>
           <FaBars />
         </button>
-
+        <br/>
         <h3 className="logo">{isOpen ? "  Admin Fabrico Mart" : "Admin"}</h3>
       </div>
 
