@@ -8,11 +8,11 @@ const Shipping = () => {
             <form>
                 <div class="form-group">
                     <label for="shipping-fees">Shipping Fees</label>
-                    <input type="text" id="shipping-fees" placeholder="$ 50" />
+                    <input type="text" id="shipping-fees" placeholder="Rs. 50" />
                 </div>
                 <div class="form-group">
                     <label for="min-value">Min Value</label>
-                    <input type="text" id="min-value" placeholder="$ 200" />
+                    <input type="text" id="min-value" placeholder="Rs. 200" />
                     <small>Min value to avoid shipping fees</small>
                 </div>
                 <div class="form-group">
