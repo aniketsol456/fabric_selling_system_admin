@@ -63,8 +63,8 @@ const Sidebar = () => {
     },
     { name: "Customer Management", icon: <FaUsers />, link: "/customers" },
     { name: "Shipping", icon: <FaTruck />, link: "/shipping" },
-    { name: "Coupons", icon: <FaTags />, link: "/coupons" },
-    { name: "Change Password", icon: <FaLock />, link: "/change-password" },
+    { name: "Coupons", icon: <FaTags />, link: "/couponview" },
+    { name: "Change Password", icon: <FaLock />, link: "/changepass" },
   ];
 
   return (
