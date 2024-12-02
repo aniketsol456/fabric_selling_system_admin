@@ -1,0 +1,100 @@
+/* Ensure that styles are scoped only to the coupon section */
+.coupon-wrapper {
+    padding: 20px;
+  }
+  
+  .coupon-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+  }
+  
+  .coupon-form h2 {
+    margin-bottom: 20px;
+    color: #000;
+  }
+  
+  .form-row {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button.add-coupon-btn {
+    background-color: #1E4D8A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button.add-coupon-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Table Styles */
+  .coupon-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .coupon-table th, .coupon-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .coupon-table th {
+    background-color: #1E4D8A;
+    color: white;
+  }
+  
+  .coupon-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  button.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button.delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .coupon-form,
+    .coupon-table {
+      padding: 10px;
+    }
+  
+    .form-row {
+      margin-bottom: 10px;
+    }
+  
+    .coupon-table table {
+      font-size: 12px;
+    }
+  }
+  
