@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 import './App.css';
 import Login from './Components/Login';
 import Sidebar from './Components/Sidebar';
+import Header from './Components/Header'; // Import Header
 import Dashboard from './Components/Dashboard';
 import CustomerManagement from './Components/CustomerManagement';
 import Shipping from './Components/Shipping';
@@ -9,6 +11,12 @@ import Coupon from './Components/Coupon';
 import ChangePassword from './Components/ChangePassword';
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen((prev) => !prev);
+  };
+
   return (
     <BrowserRouter>
       <Routes>
@@ -21,8 +29,9 @@ function App() {
           path='*'
           element={
             <div className='appContainer'>
-              <Sidebar />
-              <div className='mainContent'>
+              <Sidebar isOpen={isSidebarOpen} />
+              <div className={`mainContent ${isSidebarOpen ? 'sidebarOpen' : 'sidebarCollapsed'}`}>
+                <Header toggleSidebar={toggleSidebar} /> {/* Add Header for toggle */}
                 <Routes>
                   <Route path='/dashboard' element={<Dashboard />} />
                   <Route path='/customers' element={<CustomerManagement />} />
