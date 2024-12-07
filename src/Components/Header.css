@@ -1,0 +1,51 @@
+/* General Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: #1e4d8a;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .toggleButton,
+  .logoutButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .toggleButton:hover,
+  .logoutButton:hover {
+    color: #ff6b6b;
+  }
+  
+  .logo {
+    flex: 1;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .toggleButton {
+      display: block;
+    }
+  
+    .logo {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .toggleButton {
+      display: none;
+    }
+  }
+  
