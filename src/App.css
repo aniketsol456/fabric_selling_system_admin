@@ -17,6 +17,8 @@
     width: 250px;
     background-color: #343a40;
     color: white;
+    transition: width 0.3s ease;
+    flex-direction: column;
 }
 
 .mainContent {
@@ -24,4 +26,92 @@
     padding: 20px;
     overflow-y: auto;
     background-color: #f8f9fa;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.mainContent.sidebarOpen {
+    margin-left: 10px;
+}
+
+.mainContent.sidebarCollapsed {
+    margin-left: 0px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        height: 100%;
+        width: 0;
+        transform: translateX(-100%);
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.open {
+        width: 60px;
+        transform: translateX(0);
+    }
+
+    .mainContent {
+        margin-left: 0;
+        padding-top: 10px;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #343a40;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        z-index: 1001;
+    }
+
+    .header .toggleButton {
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .header .logo {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .logoutButton {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #f44336;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .logoutButton.show {
+        display: block;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .mainContent {
+        margin-left: 0;
+    }
 }
