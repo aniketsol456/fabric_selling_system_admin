@@ -75,7 +75,7 @@ const Coupon = () => {
               name="minValue"
               value={coupon.minValue}
               onChange={handleInputChange}
-              placeholder="$"
+              placeholder="INR"
               required
             />
           </div>
@@ -86,7 +86,7 @@ const Coupon = () => {
               name="maxValue"
               value={coupon.maxValue}
               onChange={handleInputChange}
-              placeholder="$"
+              placeholder="INR"
               required
             />
           </div>
