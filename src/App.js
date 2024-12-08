@@ -9,6 +9,7 @@ import CustomerManagement from './Components/CustomerManagement';
 import Shipping from './Components/Shipping';
 import Coupon from './Components/Coupon';
 import ChangePassword from './Components/ChangePassword';
+import OrderManagement from './Components/OrderManagement';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -21,9 +22,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* Apply a unique wrapper for the login page */}
-        <Route 
-          exact path='/' 
-          element={<div className='loginPage'><Login /></div>} 
+        <Route
+          exact path='/'
+          element={<div className='loginPage'><Login /></div>}
         />
         <Route
           path='*'
@@ -35,9 +36,10 @@ function App() {
                 <Routes>
                   <Route path='/dashboard' element={<Dashboard />} />
                   <Route path='/customers' element={<CustomerManagement />} />
+                  <Route path='/orders' element={<OrderManagement />} />
                   <Route path='/shipping' element={<Shipping />} />
-                  <Route path='/couponview' element={<Coupon/>} />
-                  <Route path='/changepass' element={<ChangePassword/>} />
+                  <Route path='/couponview' element={<Coupon />} />
+                  <Route path='/changepass' element={<ChangePassword />} />
                 </Routes>
               </div>
             </div>
