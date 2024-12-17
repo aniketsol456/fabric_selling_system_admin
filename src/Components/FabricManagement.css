@@ -1,0 +1,109 @@
+.fabric-management-page {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  
+  .fabric-management-page h1,
+  .fabric-management-page h2 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .fabric-management-page form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .fabric-management-page form div {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .fabric-management-page form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .fabric-management-page form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .fabric-management-page form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1e4d8a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .fabric-management-page form button:hover {
+    background-color: #78a2da;
+  }
+  
+  /* Table styles */
+  .fabric-management-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .fabric-management-page thead {
+    background-color: #1e4d8a;
+    color: white;
+  }
+  
+  .fabric-management-page thead th {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .fabric-management-page tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .fabric-management-page tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .fabric-management-page tbody tr:hover {
+    background-color: #e9e9e9;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .fabric-management-page form div {
+      flex: 1 1 100%;
+    }
+  
+    .fabric-management-page form button {
+      margin-top: 15px;
+    }
+  
+    .fabric-management-page table {
+      font-size: 0.9rem;
+    }
+  
+    .fabric-management-page thead th,
+    .fabric-management-page tbody td {
+      padding: 8px;
+    }
+  }
+  
